@@ -1,0 +1,15 @@
+{
+    "restartable": "rs",
+    "ignore": [],
+    "verbose": false,
+    "execMap": {
+        "ts": "ts-node"
+    },
+    "events": {
+        "restart": ""
+    },
+    "watch": ["src"],
+    "env": {
+        "NODE_ENV": "development"
+    }
+}
