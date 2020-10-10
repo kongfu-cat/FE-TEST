@@ -1,6 +1,6 @@
 {
     "restartable": "rs",
-    "ignore": [],
+    "ignore": ["*.test.js", "*.test.ts"],
     "verbose": false,
     "execMap": {
         "ts": "ts-node"
