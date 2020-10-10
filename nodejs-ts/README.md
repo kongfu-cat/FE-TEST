@@ -28,6 +28,7 @@
 -   配置 prettier，通过配置 vscode 的 formatOnSave 实现保存时自动 format
 -   onchange，监听文件变动，然后运行 prettier 调整样式
 -   [concurrently](https://github.com/kimmobrunfeldt/concurrently#readme)，实现多个指令并行运行
+-   配置 editorconfig
 
 #### 直接运行 TS 代码
 
@@ -55,3 +56,9 @@
 准备采用 Clinic，可视化不香吗？emm，用了一下，主要是针对 server 的。以后再弄吧
 
 -   [Clinic](https://github.com/clinicjs/node-clinic)
+
+#### 单元测试
+
+使用 [jest](https://jestjs.io/en/)，jest.config.js 配置通过 `jest --init` 生成，为了整合 ts，需要安装 babel。
+
+-   [ts-jest](https://github.com/kulshekhar/ts-jest) 配置更简单，不用手动配置 babel，且支持 type-checking。

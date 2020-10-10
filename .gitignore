@@ -108,3 +108,6 @@ dist
 
 # Clinic Output
 .clinic
+
+# yarn lock file
+yarn.lock

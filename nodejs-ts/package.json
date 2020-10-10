@@ -6,17 +6,18 @@
     "author": "huleye",
     "license": "MIT",
     "scripts": {
-        "clean": "rimraf ./dist",
         "build": "yarn clean & tsc",
+        "clean": "rimraf ./dist",
         "link": "yarn build & yarn link",
         "unlink": "yarn unlink",
         "lint": "eslint . --ext .ts",
-        "dev": "concurrently \"yarn start\" \"yarn prettier-watch\"",
-        "start": "nodemon ./src/index.ts",
-        "profile": "clinic doctor -- node -r ts-node/register ./src/index.ts",
+        "test": "jest",
+        "start:dev": "concurrently \"yarn start:nodemon\" \"yarn prettier:watch\"",
+        "start:nodemon": "nodemon ./src/index.ts",
+        "profile:clinic": "clinic doctor -- node -r ts-node/register ./src/index.ts",
         "profile:clean": "clinic clean",
-        "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
-        "prettier-watch": "onchange 'src/**/*.ts' -- prettier --write {{changed}}"
+        "prettier:format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+        "prettier:watch": "onchange 'src/**/*.ts' -- prettier --write {{changed}}"
     },
     "husky": {
         "hooks": {
@@ -27,6 +28,7 @@
     "devDependencies": {
         "@commitlint/cli": "^11.0.0",
         "@commitlint/config-conventional": "^11.0.0",
+        "@types/jest": "^26.0.14",
         "@types/node": "^14.11.2",
         "@typescript-eslint/eslint-plugin": "^3.10.1",
         "@typescript-eslint/parser": "^3.10.1",
@@ -36,10 +38,12 @@
         "eslint-config-prettier": "^6.12.0",
         "eslint-plugin-prettier": "^3.1.4",
         "husky": "^4.3.0",
+        "jest": "^26.5.2",
         "nodemon": "^2.0.4",
         "onchange": "^7.0.2",
         "prettier": "^2.1.2",
         "rimraf": "^3.0.2",
+        "ts-jest": "^26.4.1",
         "ts-node": "^9.0.0",
         "typescript": "^4.0.3"
     },
